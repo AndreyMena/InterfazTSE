@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>img/Escudo.png</file>
+        <file>img/Bandera.png</file>
+        <file>img/Error.png</file>
+        <file>img/Escudo2.png</file>
+        <file>img/Mesa.png</file>
+        <file>img/TSE.png</file>
+        <file>img/User.png</file>
+    </qresource>
+</RCC>
