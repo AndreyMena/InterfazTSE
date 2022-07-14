@@ -11,15 +11,18 @@ CONFIG += c++17
 SOURCES += \
     confirmarvoto.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    ventanadeerror.cpp
 
 HEADERS += \
     confirmarvoto.h \
-    mainwindow.h
+    mainwindow.h \
+    ventanadeerror.h
 
 FORMS += \
     confirmarvoto.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    ventanadeerror.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
