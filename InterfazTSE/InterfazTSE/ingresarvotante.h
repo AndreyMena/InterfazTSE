@@ -1,6 +1,7 @@
 #ifndef INGRESARVOTANTE_H
 #define INGRESARVOTANTE_H
 
+
 #include <QWidget>
 
 namespace Ui {

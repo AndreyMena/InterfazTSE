@@ -10,10 +10,12 @@ CONFIG += c++17
 
 SOURCES += \
     activarmesas.cpp \
+    comunicaciones.cpp \
     confirmarvoto.cpp \
     conteovotos.cpp \
     controlador.cpp \
     ingresarvotante.cpp \
+    log.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -22,10 +24,12 @@ SOURCES += \
 
 HEADERS += \
     activarmesas.h \
+    comunicaciones.h \
     confirmarvoto.h \
     conteovotos.h \
     controlador.h \
     ingresarvotante.h \
+    log.h \
     login.h \
     mainwindow.h \
     ventanadeerror.h \
