@@ -25,7 +25,7 @@ public:
     QFrame *frame_7;
     QLabel *label_13;
     QPushButton *pushButton_3;
-    QLineEdit *lineEdit;
+    QLineEdit *login;
     QLabel *label_10;
     QLabel *label_12;
     QFrame *frame_8;
@@ -51,7 +51,6 @@ public:
         font.setPointSize(9);
         font.setBold(false);
         font.setItalic(false);
-        font.setWeight(3);
         label_13->setFont(font);
         label_13->setLayoutDirection(Qt::LeftToRight);
         label_13->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
@@ -63,9 +62,9 @@ public:
         QFont font1;
         font1.setFamily(QString::fromUtf8("Microsoft YaHei"));
         pushButton_3->setFont(font1);
-        lineEdit = new QLineEdit(ingresarVotante);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(220, 270, 211, 31));
+        login = new QLineEdit(ingresarVotante);
+        login->setObjectName(QString::fromUtf8("login"));
+        login->setGeometry(QRect(220, 270, 211, 31));
         label_10 = new QLabel(ingresarVotante);
         label_10->setObjectName(QString::fromUtf8("label_10"));
         label_10->setGeometry(QRect(30, 60, 529, 89));
@@ -82,7 +81,6 @@ public:
         font2.setPointSize(10);
         font2.setBold(false);
         font2.setItalic(false);
-        font2.setWeight(50);
         label_12->setFont(font2);
         label_12->setLayoutDirection(Qt::LeftToRight);
         label_12->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
@@ -102,7 +100,6 @@ public:
         font3.setPointSize(12);
         font3.setBold(false);
         font3.setItalic(false);
-        font3.setWeight(50);
         label_11->setFont(font3);
         label_11->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 12pt \"Microsoft YaHei\";"));
@@ -118,7 +115,7 @@ public:
         ingresarVotante->setWindowTitle(QApplication::translate("ingresarVotante", "Form", nullptr));
         label_13->setText(QApplication::translate("ingresarVotante", "C\303\251dula:", nullptr));
         pushButton_3->setText(QApplication::translate("ingresarVotante", "Consultar", nullptr));
-        lineEdit->setText(QString());
+        login->setText(QString());
         label_10->setText(QApplication::translate("ingresarVotante", "PRESIDENCIA Y VICEPRESIDENCIA DE LA REPUBLICA", nullptr));
         label_12->setText(QApplication::translate("ingresarVotante", "Consultar Padr\303\263n", nullptr));
         label_11->setText(QApplication::translate("ingresarVotante", "ELECCIONES 2022", nullptr));

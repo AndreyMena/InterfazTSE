@@ -14,6 +14,8 @@ class ingresarVotante : public QWidget
 
 public:
     explicit ingresarVotante(QWidget *parent = nullptr);
+    void votanteValido();
+    void votanteInvalido();
     ~ingresarVotante();
 
 private slots:

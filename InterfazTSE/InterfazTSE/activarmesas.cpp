@@ -1,5 +1,6 @@
 #include "activarmesas.h"
 #include "ui_activarmesas.h"
+#include "votar.h"
 
 activarMesas::activarMesas(QWidget *parent) :
     QWidget(parent),
@@ -12,3 +13,30 @@ activarMesas::~activarMesas()
 {
     delete ui;
 }
+
+void activarMesas::on_pushButton_3_clicked()
+{
+    this->setEnabled(false);
+    votar1 = new votar(this);
+    votar1->show();
+    votar1->changeButton(1);
+}
+
+void activarMesas::on_pushButton_4_clicked()
+{
+    this->setEnabled(false);
+    votar1 = new votar(this);
+    votar1->show();
+    votar1->changeButton(2);
+}
+
+void activarMesas::enableButton(int button){
+    if(button == 1){
+        ui->pushButton_3->setEnabled(true);
+    }else if(button == 2){
+        ui->pushButton_4->setEnabled(true);
+    }
+}
+
+
+

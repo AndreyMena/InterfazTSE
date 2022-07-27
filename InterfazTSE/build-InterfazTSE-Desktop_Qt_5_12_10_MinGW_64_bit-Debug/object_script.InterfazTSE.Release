@@ -1,7 +1,9 @@
 release/activarmesas.o
+release/comunicaciones.o
 release/confirmarvoto.o
 release/conteovotos.o
 release/ingresarvotante.o
+release/log.o
 release/login.o
 release/main.o
 release/mainwindow.o

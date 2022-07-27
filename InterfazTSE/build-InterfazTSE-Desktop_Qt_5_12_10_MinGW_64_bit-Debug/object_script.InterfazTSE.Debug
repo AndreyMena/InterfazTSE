@@ -1,7 +1,9 @@
 debug/activarmesas.o
+debug/comunicaciones.o
 debug/confirmarvoto.o
 debug/conteovotos.o
 debug/ingresarvotante.o
+debug/log.o
 debug/login.o
 debug/main.o
 debug/mainwindow.o

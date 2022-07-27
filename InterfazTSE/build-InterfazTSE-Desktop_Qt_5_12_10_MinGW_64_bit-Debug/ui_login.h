@@ -27,8 +27,8 @@ public:
     QFrame *frame_7;
     QLabel *label_11;
     QLabel *label_12;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLineEdit *lnuser;
+    QLineEdit *lnpassword;
     QLabel *label_13;
     QLabel *label_14;
     QPushButton *pushButton_3;
@@ -92,12 +92,12 @@ public:
         label_12->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 10pt \"Microsoft YaHei\";"));
         label_12->setAlignment(Qt::AlignCenter);
-        lineEdit = new QLineEdit(Login);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(230, 260, 211, 31));
-        lineEdit_2 = new QLineEdit(Login);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(230, 320, 211, 31));
+        lnuser = new QLineEdit(Login);
+        lnuser->setObjectName(QString::fromUtf8("lnuser"));
+        lnuser->setGeometry(QRect(230, 260, 211, 31));
+        lnpassword = new QLineEdit(Login);
+        lnpassword->setObjectName(QString::fromUtf8("lnpassword"));
+        lnpassword->setGeometry(QRect(230, 320, 211, 31));
         label_13 = new QLabel(Login);
         label_13->setObjectName(QString::fromUtf8("label_13"));
         label_13->setGeometry(QRect(100, 250, 121, 41));
@@ -132,8 +132,8 @@ public:
         label_10->setText(QApplication::translate("Login", "PRESIDENCIA Y VICEPRESIDENCIA DE LA REPUBLICA", nullptr));
         label_11->setText(QApplication::translate("Login", "ELECCIONES 2022", nullptr));
         label_12->setText(QApplication::translate("Login", "Iniciar Sesi\303\263n", nullptr));
-        lineEdit->setText(QString());
-        lineEdit_2->setText(QString());
+        lnuser->setText(QString());
+        lnpassword->setText(QString());
         label_13->setText(QApplication::translate("Login", "Usuario:", nullptr));
         label_14->setText(QApplication::translate("Login", "Contrase\303\261a:", nullptr));
         pushButton_3->setText(QApplication::translate("Login", "Ingresar", nullptr));

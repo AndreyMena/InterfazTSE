@@ -145,7 +145,7 @@ font: 10pt &quot;Microsoft YaHei&quot;;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lnuser">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -158,7 +158,7 @@ font: 10pt &quot;Microsoft YaHei&quot;;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lnpassword">
    <property name="geometry">
     <rect>
      <x>230</x>
