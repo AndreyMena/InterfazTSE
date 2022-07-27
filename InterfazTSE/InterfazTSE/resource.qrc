@@ -7,5 +7,13 @@
         <file>img/Mesa.png</file>
         <file>img/TSE.png</file>
         <file>img/User.png</file>
+        <file>img/frente.png</file>
+        <file>img/pac.png</file>
+        <file>img/pln.png</file>
+        <file>img/presi1.png</file>
+        <file>img/presi2.png</file>
+        <file>img/presi3.png</file>
+        <file>img/presi4.png</file>
+        <file>img/up.png</file>
     </qresource>
 </RCC>

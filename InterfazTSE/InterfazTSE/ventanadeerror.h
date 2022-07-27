@@ -15,9 +15,6 @@ public:
     explicit ventanaDeError(QWidget *parent = nullptr);
     ~ventanaDeError();
 
-private slots:
-    void on_botonOk_clicked();
-
 private:
     Ui::ventanaDeError *ui;
 };

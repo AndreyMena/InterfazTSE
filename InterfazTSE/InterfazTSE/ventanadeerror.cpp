@@ -12,9 +12,3 @@ ventanaDeError::~ventanaDeError()
 {
     delete ui;
 }
-
-void ventanaDeError::on_botonOk_clicked()
-{
-
-}
-

@@ -12,15 +12,3 @@ confirmarVoto::~confirmarVoto()
 {
     delete ui;
 }
-
-void confirmarVoto::on_botonSi_clicked()
-{
-
-}
-
-
-void confirmarVoto::on_botonNo_clicked()
-{
-
-}
-

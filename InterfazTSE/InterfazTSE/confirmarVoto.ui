@@ -6,160 +6,170 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>552</width>
-    <height>410</height>
+    <width>553</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: rgb(204, 207, 207);
-font: 16pt &quot;Segoe UI&quot;;
-font: 18pt &quot;Segoe UI&quot;;</string>
-  </property>
-  <widget class="QWidget" name="horizontalLayoutWidget_2">
+  <widget class="QLabel" name="label_12">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>100</y>
-     <width>531</width>
-     <height>91</height>
+     <x>0</x>
+     <y>170</y>
+     <width>541</width>
+     <height>89</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_13">
-    <item>
-     <widget class="QLabel" name="label_10">
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 9pt &quot;Segoe UI&quot;;</string>
-      </property>
-      <property name="text">
-       <string>PRESIDENCIA Y VICEPRESIDENCIA DE LA REPUBLICA</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 10pt &quot;Microsoft YaHei&quot;;</string>
+   </property>
+   <property name="text">
+    <string>¿Seguro que desea votar por xxxxxx?</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
+  <widget class="QFrame" name="frame_8">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>531</width>
-     <height>91</height>
+     <x>320</x>
+     <y>30</y>
+     <width>153</width>
+     <height>89</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_14">
-    <item>
-     <widget class="QFrame" name="frame_7">
-      <property name="styleSheet">
-       <string notr="true">image: url(:/resource/img/Escudo.png);
+   <property name="styleSheet">
+    <string notr="true">image: url(:/resource/img/TSE.png);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_7">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>30</y>
+     <width>153</width>
+     <height>89</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/resource/img/Escudo.png);
 image: url(:/resource/img/Escudo2.png);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_11">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 18pt &quot;Segoe UI&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Elecciones 2022</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame_8">
-      <property name="styleSheet">
-       <string notr="true">image: url(:/resource/img/TSE.png);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
   </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget_3">
+  <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>190</y>
-     <width>531</width>
-     <height>91</height>
+     <y>70</y>
+     <width>529</width>
+     <height>89</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_15">
-    <item>
-     <widget class="QLabel" name="label_12">
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);
-font: 9pt &quot;Segoe UI&quot;;</string>
-      </property>
-      <property name="text">
-       <string>¿Seguro que desea vota por xxxx xxxx?</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>9</pointsize>
+     <weight>3</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 25 9pt &quot;Microsoft YaHei&quot;;</string>
+   </property>
+   <property name="text">
+    <string>PRESIDENCIA Y VICEPRESIDENCIA DE LA REPUBLICA</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget_4">
+  <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>160</x>
+     <y>30</y>
+     <width>209</width>
+     <height>89</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 12pt &quot;Microsoft YaHei&quot;;</string>
+   </property>
+   <property name="text">
+    <string>ELECCIONES 2022</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
      <y>280</y>
-     <width>531</width>
-     <height>121</height>
+     <width>81</width>
+     <height>28</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_16">
-    <item>
-     <widget class="QPushButton" name="botonSi">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);</string>
-      </property>
-      <property name="text">
-       <string>SÍ</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="botonNo">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);</string>
-      </property>
-      <property name="text">
-       <string>NO</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="text">
+    <string>Sí</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>280</y>
+     <width>81</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No</string>
+   </property>
   </widget>
  </widget>
  <resources/>

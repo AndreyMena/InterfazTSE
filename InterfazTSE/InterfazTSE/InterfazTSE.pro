@@ -9,20 +9,35 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    activarmesas.cpp \
     confirmarvoto.cpp \
+    conteovotos.cpp \
+    ingresarvotante.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
-    ventanadeerror.cpp
+    ventanadeerror.cpp \
+    votar.cpp
 
 HEADERS += \
+    activarmesas.h \
     confirmarvoto.h \
+    conteovotos.h \
+    ingresarvotante.h \
+    login.h \
     mainwindow.h \
-    ventanadeerror.h
+    ventanadeerror.h \
+    votar.h
 
 FORMS += \
+    activarmesas.ui \
     confirmarvoto.ui \
+    conteovotos.ui \
+    ingresarvotante.ui \
+    login.ui \
     mainwindow.ui \
-    ventanadeerror.ui
+    ventanadeerror.ui \
+    votar.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
