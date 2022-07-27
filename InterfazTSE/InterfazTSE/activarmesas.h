@@ -14,7 +14,7 @@ class activarMesas : public QWidget
 
 public:
     explicit activarMesas(QWidget *parent = nullptr);
-    void enableButton(int button);
+    //void enableButton(int button);
     ~activarMesas();
 
 private slots:

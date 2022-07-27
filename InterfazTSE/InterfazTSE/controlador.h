@@ -15,8 +15,8 @@ class Controlador
 public:
     Controlador();
     int consultarPadron(string cedula);
-    void votanteValido();
-    void votanteInvalido();
+    //void votanteValido();
+    //void votanteInvalido();
     void registrar(char caracter);
     void votar(string voto);
 private:

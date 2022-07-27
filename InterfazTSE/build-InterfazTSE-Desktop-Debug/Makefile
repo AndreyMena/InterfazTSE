@@ -240,7 +240,6 @@ DIST          = /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../InterfazTSE/comunicaciones.h \
 		../InterfazTSE/confirmarvoto.h \
 		../InterfazTSE/conteovotos.h \
-		../InterfazTSE/controlador.h \
 		../InterfazTSE/ingresarvotante.h \
 		../InterfazTSE/log.h \
 		../InterfazTSE/login.h \
@@ -585,8 +584,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../InterfazTSE/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.h ../InterfazTSE/comunicaciones.h ../InterfazTSE/confirmarvoto.h ../InterfazTSE/conteovotos.h ../InterfazTSE/controlador.h ../InterfazTSE/ingresarvotante.h ../InterfazTSE/log.h ../InterfazTSE/login.h ../InterfazTSE/mainwindow.h ../InterfazTSE/ventanadeerror.h ../InterfazTSE/votar.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.cpp ../InterfazTSE/comunicaciones.cpp ../InterfazTSE/confirmarvoto.cpp ../InterfazTSE/conteovotos.cpp ../InterfazTSE/controlador.cpp ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/log.cpp ../InterfazTSE/login.cpp ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.cpp ../InterfazTSE/ventanadeerror.cpp ../InterfazTSE/votar.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.h ../InterfazTSE/comunicaciones.h ../InterfazTSE/confirmarvoto.h ../InterfazTSE/conteovotos.h ../InterfazTSE/ingresarvotante.h ../InterfazTSE/log.h ../InterfazTSE/login.h ../InterfazTSE/mainwindow.h ../InterfazTSE/ventanadeerror.h ../InterfazTSE/votar.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.cpp ../InterfazTSE/comunicaciones.cpp ../InterfazTSE/confirmarvoto.cpp ../InterfazTSE/conteovotos.cpp ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/log.cpp ../InterfazTSE/login.cpp ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.cpp ../InterfazTSE/ventanadeerror.cpp ../InterfazTSE/votar.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.ui ../InterfazTSE/confirmarVoto.ui ../InterfazTSE/conteovotos.ui ../InterfazTSE/ingresarvotante.ui ../InterfazTSE/login.ui ../InterfazTSE/mainwindow.ui ../InterfazTSE/ventanadeerror.ui ../InterfazTSE/votar.ui $(DISTDIR)/
 
 
@@ -775,6 +774,9 @@ moc_activarmesas.cpp: ../InterfazTSE/activarmesas.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../InterfazTSE/votar.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
 		moc_predefs.h \
 		/home/meez/Qt/6.3.1/gcc_64/libexec/moc
 	/home/meez/Qt/6.3.1/gcc_64/libexec/moc $(DEFINES) --include /home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/build-InterfazTSE-Desktop-Debug/moc_predefs.h -I/home/meez/Qt/6.3.1/gcc_64/mkspecs/linux-g++ -I/home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/InterfazTSE -I/home/meez/Qt/6.3.1/gcc_64/include -I/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets -I/home/meez/Qt/6.3.1/gcc_64/include/QtGui -I/home/meez/Qt/6.3.1/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../InterfazTSE/activarmesas.h -o moc_activarmesas.cpp
@@ -1054,6 +1056,9 @@ moc_conteovotos.cpp: ../InterfazTSE/conteovotos.h \
 	/home/meez/Qt/6.3.1/gcc_64/libexec/moc $(DEFINES) --include /home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/build-InterfazTSE-Desktop-Debug/moc_predefs.h -I/home/meez/Qt/6.3.1/gcc_64/mkspecs/linux-g++ -I/home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/InterfazTSE -I/home/meez/Qt/6.3.1/gcc_64/include -I/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets -I/home/meez/Qt/6.3.1/gcc_64/include/QtGui -I/home/meez/Qt/6.3.1/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../InterfazTSE/conteovotos.h -o moc_conteovotos.cpp
 
 moc_ingresarvotante.cpp: ../InterfazTSE/ingresarvotante.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
+		../InterfazTSE/activarmesas.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qwidget.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1186,6 +1191,7 @@ moc_ingresarvotante.cpp: ../InterfazTSE/ingresarvotante.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../InterfazTSE/votar.h \
 		moc_predefs.h \
 		/home/meez/Qt/6.3.1/gcc_64/libexec/moc
 	/home/meez/Qt/6.3.1/gcc_64/libexec/moc $(DEFINES) --include /home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/build-InterfazTSE-Desktop-Debug/moc_predefs.h -I/home/meez/Qt/6.3.1/gcc_64/mkspecs/linux-g++ -I/home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/InterfazTSE -I/home/meez/Qt/6.3.1/gcc_64/include -I/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets -I/home/meez/Qt/6.3.1/gcc_64/include/QtGui -I/home/meez/Qt/6.3.1/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../InterfazTSE/ingresarvotante.h -o moc_ingresarvotante.cpp
@@ -1736,6 +1742,8 @@ moc_votar.cpp: ../InterfazTSE/votar.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
 		moc_predefs.h \
 		/home/meez/Qt/6.3.1/gcc_64/libexec/moc
 	/home/meez/Qt/6.3.1/gcc_64/libexec/moc $(DEFINES) --include /home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/build-InterfazTSE-Desktop-Debug/moc_predefs.h -I/home/meez/Qt/6.3.1/gcc_64/mkspecs/linux-g++ -I/home/meez/Escritorio/Interfaz/InterfazTSE/InterfazTSE/InterfazTSE -I/home/meez/Qt/6.3.1/gcc_64/include -I/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets -I/home/meez/Qt/6.3.1/gcc_64/include/QtGui -I/home/meez/Qt/6.3.1/gcc_64/include/QtCore -I. -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../InterfazTSE/votar.h -o moc_votar.cpp
@@ -1922,6 +1930,9 @@ activarmesas.o: ../InterfazTSE/activarmesas.cpp ../InterfazTSE/activarmesas.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../InterfazTSE/votar.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
 		ui_activarmesas.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
@@ -1957,8 +1968,6 @@ activarmesas.o: ../InterfazTSE/activarmesas.cpp ../InterfazTSE/activarmesas.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o activarmesas.o ../InterfazTSE/activarmesas.cpp
 
 comunicaciones.o: ../InterfazTSE/comunicaciones.cpp ../InterfazTSE/comunicaciones.h \
-		../InterfazTSE/controlador.cpp \
-		../InterfazTSE/controlador.h \
 		../InterfazTSE/log.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o comunicaciones.o ../InterfazTSE/comunicaciones.cpp
 
@@ -2294,6 +2303,9 @@ conteovotos.o: ../InterfazTSE/conteovotos.cpp ../InterfazTSE/conteovotos.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o conteovotos.o ../InterfazTSE/conteovotos.cpp
 
 ingresarvotante.o: ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/ingresarvotante.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
+		../InterfazTSE/activarmesas.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qwidget.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -2426,6 +2438,7 @@ ingresarvotante.o: ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/ingresarvot
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../InterfazTSE/votar.h \
 		ui_ingresarvotante.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
@@ -2464,8 +2477,9 @@ ingresarvotante.o: ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/ingresarvot
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../InterfazTSE/controlador.h \
-		../InterfazTSE/log.h
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QMessageBox \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ingresarvotante.o ../InterfazTSE/ingresarvotante.cpp
 
 log.o: ../InterfazTSE/log.cpp ../InterfazTSE/log.h
@@ -2641,7 +2655,15 @@ login.o: ../InterfazTSE/login.cpp ../InterfazTSE/login.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextoption.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../InterfazTSE/ingresarvotante.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
+		../InterfazTSE/activarmesas.h \
+		../InterfazTSE/votar.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QMessageBox \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../InterfazTSE/login.cpp
 
 main.o: ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.h \
@@ -2784,8 +2806,11 @@ main.o: ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.h \
 		../InterfazTSE/ventanadeerror.h \
 		../InterfazTSE/conteovotos.h \
 		../InterfazTSE/ingresarvotante.h \
-		../InterfazTSE/login.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
+		../InterfazTSE/activarmesas.h \
 		../InterfazTSE/votar.h \
+		../InterfazTSE/login.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
@@ -3275,6 +3300,8 @@ votar.o: ../InterfazTSE/votar.cpp ../InterfazTSE/votar.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../InterfazTSE/comunicaciones.h \
+		../InterfazTSE/log.h \
 		ui_votar.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
@@ -3306,7 +3333,10 @@ votar.o: ../InterfazTSE/votar.cpp ../InterfazTSE/votar.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QMessageBox \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o votar.o ../InterfazTSE/votar.cpp
 
 qrc_resource.o: qrc_resource.cpp 

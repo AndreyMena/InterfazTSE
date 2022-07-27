@@ -30,6 +30,7 @@ public:
     QLabel *label_12;
     QFrame *frame_8;
     QLabel *label_11;
+    QPushButton *pushButton_4;
 
     void setupUi(QWidget *ingresarVotante)
     {
@@ -104,6 +105,10 @@ public:
         label_11->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 12pt \"Microsoft YaHei\";"));
         label_11->setAlignment(Qt::AlignCenter);
+        pushButton_4 = new QPushButton(ingresarVotante);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(460, 460, 141, 28));
+        pushButton_4->setFont(font1);
 
         retranslateUi(ingresarVotante);
 
@@ -119,6 +124,7 @@ public:
         label_10->setText(QCoreApplication::translate("ingresarVotante", "PRESIDENCIA Y VICEPRESIDENCIA DE LA REPUBLICA", nullptr));
         label_12->setText(QCoreApplication::translate("ingresarVotante", "Consultar Padr\303\263n", nullptr));
         label_11->setText(QCoreApplication::translate("ingresarVotante", "ELECCIONES 2022", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("ingresarVotante", "Ver Resultados", nullptr));
     } // retranslateUi
 
 };

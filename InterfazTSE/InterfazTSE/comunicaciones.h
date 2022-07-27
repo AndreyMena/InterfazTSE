@@ -9,19 +9,31 @@
 #include <arpa/inet.h>
 #include <vector>
 #include <chrono>
-#include "controlador.cpp"
+//#include "controlador.h"
+
+#include "log.h"
+
+//class ingresarVotante;
 
 class Comunicaciones
 {
 public:
   Comunicaciones();
-  int cliente(std::string mensaje);
-  int servidor();
+  int enviar(std::string mensaje);
+  char* recibir();
+
   std::string getDate();
-  void execute(char* mensaje);
+
   std::string convertToString(char* a, int size);
 private:
-  Controlador* controlador;
+
+  //ingresarVotante* ingresarvotante;
+  //Log* log;
+
+  int emisor;
+  int receptor;
+  struct sockaddr_in ipServidor;
+  //Controlador* controlador;
 };
 
 #endif // COMUNICACIONES_H

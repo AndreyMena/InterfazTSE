@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     //MainWindow w;
 
-    ingresarVotante ingre;
-    ingre.show();
+    //ingresarVotante ingre;
+    //ingre.show();
 
     // w.show();
 
@@ -27,15 +27,15 @@ int main(int argc, char *argv[])
     //Probando ventana de error (quitar luego)
 //    ventanaDeError w3;
 //    w3.show();
-/*
-    conteoVotos w4;
-    w4.show();
+
+    //conteoVotos w4;
+    //w4.show();
 
     Login w5;
     w5.show();
 
-    votar w6;
-    w6.show();
-*/
+    //votar w6;
+    //w6.show();
+
     return a.exec();
 }

@@ -1,6 +1,9 @@
 #ifndef INGRESARVOTANTE_H
 #define INGRESARVOTANTE_H
 
+#include "comunicaciones.h"
+#include "log.h"
+#include "activarmesas.h"
 
 #include <QWidget>
 
@@ -16,6 +19,7 @@ public:
     explicit ingresarVotante(QWidget *parent = nullptr);
     void votanteValido();
     void votanteInvalido();
+    void execute(char* datos);
     ~ingresarVotante();
 
 private slots:
@@ -23,6 +27,10 @@ private slots:
 
 private:
     Ui::ingresarVotante *ui;
+    Comunicaciones* comunicaciones;
+    Log* log;
+    string cedula;
+    activarMesas* activarmesas;
 };
 
 #endif // INGRESARVOTANTE_H

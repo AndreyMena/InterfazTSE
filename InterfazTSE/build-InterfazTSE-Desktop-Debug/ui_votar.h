@@ -54,10 +54,10 @@ public:
     QLabel *label_26;
     QLabel *label_14;
     QLabel *label_24;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *votarPLN;
+    QPushButton *votarPAC;
+    QPushButton *votarUP;
+    QPushButton *votarFA;
     QLabel *label;
 
     void setupUi(QWidget *votar)
@@ -339,24 +339,24 @@ public:
         label_24->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 4pt \"Microsoft YaHei\";"));
         label_24->setAlignment(Qt::AlignCenter);
-        pushButton = new QPushButton(votar);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(140, 280, 71, 28));
+        votarPLN = new QPushButton(votar);
+        votarPLN->setObjectName(QString::fromUtf8("votarPLN"));
+        votarPLN->setGeometry(QRect(140, 280, 71, 28));
         QFont font6;
         font6.setFamilies({QString::fromUtf8("Microsoft YaHei")});
-        pushButton->setFont(font6);
-        pushButton_2 = new QPushButton(votar);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(460, 280, 71, 28));
-        pushButton_2->setFont(font6);
-        pushButton_3 = new QPushButton(votar);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(140, 480, 71, 28));
-        pushButton_3->setFont(font6);
-        pushButton_4 = new QPushButton(votar);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(460, 480, 71, 28));
-        pushButton_4->setFont(font6);
+        votarPLN->setFont(font6);
+        votarPAC = new QPushButton(votar);
+        votarPAC->setObjectName(QString::fromUtf8("votarPAC"));
+        votarPAC->setGeometry(QRect(460, 280, 71, 28));
+        votarPAC->setFont(font6);
+        votarUP = new QPushButton(votar);
+        votarUP->setObjectName(QString::fromUtf8("votarUP"));
+        votarUP->setGeometry(QRect(140, 480, 71, 28));
+        votarUP->setFont(font6);
+        votarFA = new QPushButton(votar);
+        votarFA->setObjectName(QString::fromUtf8("votarFA"));
+        votarFA->setGeometry(QRect(460, 480, 71, 28));
+        votarFA->setFont(font6);
         label = new QLabel(votar);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(50, 560, 451, 16));
@@ -393,10 +393,10 @@ public:
         label_26->setText(QCoreApplication::translate("votar", "Iliana Cordero Ruiz", nullptr));
         label_14->setText(QCoreApplication::translate("votar", "Primera Viceprecidencia", nullptr));
         label_24->setText(QCoreApplication::translate("votar", "Segunda Viceprecidencia", nullptr));
-        pushButton->setText(QCoreApplication::translate("votar", "Votar", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("votar", "Votar", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("votar", "Votar", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("votar", "Votar", nullptr));
+        votarPLN->setText(QCoreApplication::translate("votar", "Votar", nullptr));
+        votarPAC->setText(QCoreApplication::translate("votar", "Votar", nullptr));
+        votarUP->setText(QCoreApplication::translate("votar", "Votar", nullptr));
+        votarFA->setText(QCoreApplication::translate("votar", "Votar", nullptr));
         label->setText(QCoreApplication::translate("votar", "Seleccione el bot\303\263n \"Votar\" bajo la foto de su candidato de preferencia.", nullptr));
     } // retranslateUi
 

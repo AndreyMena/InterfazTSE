@@ -13,7 +13,6 @@ SOURCES += \
     comunicaciones.cpp \
     confirmarvoto.cpp \
     conteovotos.cpp \
-    controlador.cpp \
     ingresarvotante.cpp \
     log.cpp \
     login.cpp \
@@ -27,7 +26,6 @@ HEADERS += \
     comunicaciones.h \
     confirmarvoto.h \
     conteovotos.h \
-    controlador.h \
     ingresarvotante.h \
     log.h \
     login.h \

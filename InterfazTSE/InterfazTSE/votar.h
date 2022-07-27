@@ -2,7 +2,11 @@
 #define VOTAR_H
 
 #include <QWidget>
-#include "controlador.h"
+#include "comunicaciones.h"
+#include "log.h"
+//#include "activarmesas.h"
+
+class activarMesas;
 
 namespace Ui {
 class votar;
@@ -18,18 +22,29 @@ public:
     ~votar();
 
 private slots:
-    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_votarPLN_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_votarPAC_clicked();
+
+    void on_votarUP_clicked();
+
+    void on_votarFA_clicked();
+
+    void execute(char* mensaje);
+
+    void votoValido();
+
+    void votoInvalido();
 
 private:
     Ui::votar *ui;
     int button;
-    Controlador *controlador;
+    Comunicaciones* comunicaciones;
+    Log* log;
+    activarMesas* activarmesa;
+    //Controlador *controlador;
 };
 
 #endif // VOTAR_H
