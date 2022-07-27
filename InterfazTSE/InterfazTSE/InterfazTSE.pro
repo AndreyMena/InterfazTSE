@@ -12,6 +12,7 @@ SOURCES += \
     activarmesas.cpp \
     confirmarvoto.cpp \
     conteovotos.cpp \
+    controlador.cpp \
     ingresarvotante.cpp \
     login.cpp \
     main.cpp \
@@ -23,6 +24,7 @@ HEADERS += \
     activarmesas.h \
     confirmarvoto.h \
     conteovotos.h \
+    controlador.h \
     ingresarvotante.h \
     login.h \
     mainwindow.h \

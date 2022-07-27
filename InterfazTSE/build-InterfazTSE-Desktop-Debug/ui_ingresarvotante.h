@@ -25,7 +25,7 @@ public:
     QFrame *frame_7;
     QLabel *label_13;
     QPushButton *pushButton_3;
-    QLineEdit *lineEdit;
+    QLineEdit *login;
     QLabel *label_10;
     QLabel *label_12;
     QFrame *frame_8;
@@ -62,9 +62,9 @@ public:
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Microsoft YaHei")});
         pushButton_3->setFont(font1);
-        lineEdit = new QLineEdit(ingresarVotante);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(220, 270, 211, 31));
+        login = new QLineEdit(ingresarVotante);
+        login->setObjectName(QString::fromUtf8("login"));
+        login->setGeometry(QRect(220, 270, 211, 31));
         label_10 = new QLabel(ingresarVotante);
         label_10->setObjectName(QString::fromUtf8("label_10"));
         label_10->setGeometry(QRect(30, 60, 529, 89));
@@ -115,7 +115,7 @@ public:
         ingresarVotante->setWindowTitle(QCoreApplication::translate("ingresarVotante", "Form", nullptr));
         label_13->setText(QCoreApplication::translate("ingresarVotante", "C\303\251dula:", nullptr));
         pushButton_3->setText(QCoreApplication::translate("ingresarVotante", "Consultar", nullptr));
-        lineEdit->setText(QString());
+        login->setText(QString());
         label_10->setText(QCoreApplication::translate("ingresarVotante", "PRESIDENCIA Y VICEPRESIDENCIA DE LA REPUBLICA", nullptr));
         label_12->setText(QCoreApplication::translate("ingresarVotante", "Consultar Padr\303\263n", nullptr));
         label_11->setText(QCoreApplication::translate("ingresarVotante", "ELECCIONES 2022", nullptr));

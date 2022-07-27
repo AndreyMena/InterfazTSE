@@ -15,6 +15,9 @@ public:
     explicit ingresarVotante(QWidget *parent = nullptr);
     ~ingresarVotante();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::ingresarVotante *ui;
 };

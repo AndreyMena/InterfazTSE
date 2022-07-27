@@ -55,6 +55,7 @@ OBJECTS_DIR   = ./
 SOURCES       = ../InterfazTSE/activarmesas.cpp \
 		../InterfazTSE/confirmarvoto.cpp \
 		../InterfazTSE/conteovotos.cpp \
+		../InterfazTSE/controlador.cpp \
 		../InterfazTSE/ingresarvotante.cpp \
 		../InterfazTSE/login.cpp \
 		../InterfazTSE/main.cpp \
@@ -72,6 +73,7 @@ SOURCES       = ../InterfazTSE/activarmesas.cpp \
 OBJECTS       = activarmesas.o \
 		confirmarvoto.o \
 		conteovotos.o \
+		controlador.o \
 		ingresarvotante.o \
 		login.o \
 		main.o \
@@ -211,6 +213,7 @@ DIST          = /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf \
+		../InterfazTSE/.qmake.stash \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -234,6 +237,7 @@ DIST          = /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../InterfazTSE/InterfazTSE.pro ../InterfazTSE/activarmesas.h \
 		../InterfazTSE/confirmarvoto.h \
 		../InterfazTSE/conteovotos.h \
+		../InterfazTSE/controlador.h \
 		../InterfazTSE/ingresarvotante.h \
 		../InterfazTSE/login.h \
 		../InterfazTSE/mainwindow.h \
@@ -241,6 +245,7 @@ DIST          = /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/spec_pre.prf \
 		../InterfazTSE/votar.h ../InterfazTSE/activarmesas.cpp \
 		../InterfazTSE/confirmarvoto.cpp \
 		../InterfazTSE/conteovotos.cpp \
+		../InterfazTSE/controlador.cpp \
 		../InterfazTSE/ingresarvotante.cpp \
 		../InterfazTSE/login.cpp \
 		../InterfazTSE/main.cpp \
@@ -382,6 +387,7 @@ Makefile: ../InterfazTSE/InterfazTSE.pro /home/meez/Qt/6.3.1/gcc_64/mkspecs/linu
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf \
 		/home/meez/Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf \
@@ -532,6 +538,7 @@ Makefile: ../InterfazTSE/InterfazTSE.pro /home/meez/Qt/6.3.1/gcc_64/mkspecs/linu
 /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/qt_config.prf:
 /home/meez/Qt/6.3.1/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/toolchain.prf:
 /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/default_pre.prf:
@@ -573,8 +580,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../InterfazTSE/resource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /home/meez/Qt/6.3.1/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.h ../InterfazTSE/confirmarvoto.h ../InterfazTSE/conteovotos.h ../InterfazTSE/ingresarvotante.h ../InterfazTSE/login.h ../InterfazTSE/mainwindow.h ../InterfazTSE/ventanadeerror.h ../InterfazTSE/votar.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.cpp ../InterfazTSE/confirmarvoto.cpp ../InterfazTSE/conteovotos.cpp ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/login.cpp ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.cpp ../InterfazTSE/ventanadeerror.cpp ../InterfazTSE/votar.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.h ../InterfazTSE/confirmarvoto.h ../InterfazTSE/conteovotos.h ../InterfazTSE/controlador.h ../InterfazTSE/ingresarvotante.h ../InterfazTSE/login.h ../InterfazTSE/mainwindow.h ../InterfazTSE/ventanadeerror.h ../InterfazTSE/votar.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.cpp ../InterfazTSE/confirmarvoto.cpp ../InterfazTSE/conteovotos.cpp ../InterfazTSE/controlador.cpp ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/login.cpp ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.cpp ../InterfazTSE/ventanadeerror.cpp ../InterfazTSE/votar.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../InterfazTSE/activarmesas.ui ../InterfazTSE/confirmarVoto.ui ../InterfazTSE/conteovotos.ui ../InterfazTSE/ingresarvotante.ui ../InterfazTSE/login.ui ../InterfazTSE/mainwindow.ui ../InterfazTSE/ventanadeerror.ui ../InterfazTSE/votar.ui $(DISTDIR)/
 
 
@@ -1910,7 +1917,38 @@ activarmesas.o: ../InterfazTSE/activarmesas.cpp ../InterfazTSE/activarmesas.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
-		ui_activarmesas.h
+		ui_activarmesas.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o activarmesas.o ../InterfazTSE/activarmesas.cpp
 
 confirmarvoto.o: ../InterfazTSE/confirmarvoto.cpp ../InterfazTSE/confirmarvoto.h \
@@ -2045,7 +2083,39 @@ confirmarvoto.o: ../InterfazTSE/confirmarvoto.cpp ../InterfazTSE/confirmarvoto.h
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSize \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
-		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		ui_confirmarvoto.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o confirmarvoto.o ../InterfazTSE/confirmarvoto.cpp
 
 conteovotos.o: ../InterfazTSE/conteovotos.cpp ../InterfazTSE/conteovotos.h \
@@ -2181,8 +2251,39 @@ conteovotos.o: ../InterfazTSE/conteovotos.cpp ../InterfazTSE/conteovotos.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
-		ui_conteovotos.h
+		ui_conteovotos.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o conteovotos.o ../InterfazTSE/conteovotos.cpp
+
+controlador.o: ../InterfazTSE/controlador.cpp ../InterfazTSE/controlador.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o controlador.o ../InterfazTSE/controlador.cpp
 
 ingresarvotante.o: ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/ingresarvotante.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget \
@@ -2317,7 +2418,45 @@ ingresarvotante.o: ../InterfazTSE/ingresarvotante.cpp ../InterfazTSE/ingresarvot
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
-		ui_ingresarvotante.h
+		ui_ingresarvotante.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLineEdit \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextcursor.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextformat.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpen.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextoption.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../InterfazTSE/controlador.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ingresarvotante.o ../InterfazTSE/ingresarvotante.cpp
 
 login.o: ../InterfazTSE/login.cpp ../InterfazTSE/login.h \
@@ -2453,7 +2592,44 @@ login.o: ../InterfazTSE/login.cpp ../InterfazTSE/login.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
-		ui_login.h
+		ui_login.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLineEdit \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextcursor.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextformat.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpen.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextoption.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../InterfazTSE/login.cpp
 
 main.o: ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.h \
@@ -2595,6 +2771,7 @@ main.o: ../InterfazTSE/main.cpp ../InterfazTSE/mainwindow.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		../InterfazTSE/ventanadeerror.h \
 		../InterfazTSE/conteovotos.h \
+		../InterfazTSE/ingresarvotante.h \
 		../InterfazTSE/login.h \
 		../InterfazTSE/votar.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
@@ -2755,7 +2932,35 @@ mainwindow.o: ../InterfazTSE/mainwindow.cpp ../InterfazTSE/mainwindow.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QMenuBar \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qmenu.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QStatusBar \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../InterfazTSE/mainwindow.cpp
 
 ventanadeerror.o: ../InterfazTSE/ventanadeerror.cpp ../InterfazTSE/ventanadeerror.h \
@@ -2891,7 +3096,38 @@ ventanadeerror.o: ../InterfazTSE/ventanadeerror.cpp ../InterfazTSE/ventanadeerro
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
-		ui_ventanadeerror.h
+		ui_ventanadeerror.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ventanadeerror.o ../InterfazTSE/ventanadeerror.cpp
 
 votar.o: ../InterfazTSE/votar.cpp ../InterfazTSE/votar.h \
@@ -3027,7 +3263,38 @@ votar.o: ../InterfazTSE/votar.cpp ../InterfazTSE/votar.h \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QSizeF \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/QTransform \
 		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
-		ui_votar.h
+		ui_votar.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/QVariant \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qmutex.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qresultstore.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthreadpool.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qthread.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qrunnable.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qexception.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qpromise.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qinputmethod.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtCore/qlocale.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QFrame \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qframe.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qlabel.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qpicture.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtGui/qtextdocument.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/meez/Qt/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o votar.o ../InterfazTSE/votar.cpp
 
 qrc_resource.o: qrc_resource.cpp 

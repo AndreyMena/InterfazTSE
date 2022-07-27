@@ -46,7 +46,6 @@ image: url(:/resource/img/Escudo2.png);</string>
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>9</pointsize>
-     <weight>3</weight>
      <italic>false</italic>
      <bold>false</bold>
     </font>
@@ -83,7 +82,7 @@ font: 25 9pt &quot;Microsoft YaHei&quot;;</string>
     <string>Consultar</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="login">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -109,7 +108,6 @@ font: 25 9pt &quot;Microsoft YaHei&quot;;</string>
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>9</pointsize>
-     <weight>3</weight>
      <italic>false</italic>
      <bold>false</bold>
     </font>
@@ -141,7 +139,6 @@ font: 25 9pt &quot;Microsoft YaHei&quot;;</string>
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>10</pointsize>
-     <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
     </font>
@@ -192,7 +189,6 @@ font: 10pt &quot;Microsoft YaHei&quot;;</string>
     <font>
      <family>Microsoft YaHei</family>
      <pointsize>12</pointsize>
-     <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
     </font>
