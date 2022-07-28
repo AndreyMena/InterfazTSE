@@ -1,0 +1,21 @@
+#include "conteovotos.h"
+#include "ui_conteovotos.h"
+
+conteoVotos::conteoVotos(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::conteoVotos)
+{
+    ui->setupUi(this);
+}
+
+conteoVotos::~conteoVotos()
+{
+    delete ui;
+}
+
+conteoVotos::cambiarVotos(std::string pln, std::string pac, std::string up, std::string fa){
+    ui->votospl->setText(pln);
+    ui->votospac->setText(pac);
+    ui->votosup->setText(up);
+    ui->votosfa->setText(fa);
+}

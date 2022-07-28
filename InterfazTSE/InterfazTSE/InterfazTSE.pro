@@ -10,8 +10,8 @@ CONFIG += c++17
 
 SOURCES += \
     activarmesas.cpp \
+    admin.cpp \
     comunicaciones.cpp \
-    confirmarvoto.cpp \
     conteovotos.cpp \
     ingresarvotante.cpp \
     log.cpp \
@@ -23,8 +23,8 @@ SOURCES += \
 
 HEADERS += \
     activarmesas.h \
+    admin.h \
     comunicaciones.h \
-    confirmarvoto.h \
     conteovotos.h \
     ingresarvotante.h \
     log.h \
@@ -35,7 +35,7 @@ HEADERS += \
 
 FORMS += \
     activarmesas.ui \
-    confirmarvoto.ui \
+    admin.ui \
     conteovotos.ui \
     ingresarvotante.ui \
     login.ui \
