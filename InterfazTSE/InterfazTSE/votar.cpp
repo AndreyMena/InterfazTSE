@@ -24,61 +24,73 @@ void votar::changeButton(int button){
 void votar::on_votarPLN_clicked()
 {
 
-    log->registrar('4');
-
-    comunicaciones->enviar("4 01");
-
-    //string respuesta = comunicaciones->recibir();
-
+    if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Liberación Nacional", QMessageBox::Yes|QMessageBox::No).exec())
+    {
+        comunicaciones->enviar("4 01");
+        log->registrar('4');
+        hide();
+    }
 }
 
 
 void votar::on_votarPAC_clicked()
 {
-    log->registrar('4');
-    comunicaciones->enviar("4 02");
+    if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Acci[on Ciudadana", QMessageBox::Yes|QMessageBox::No).exec())
+    {
+        comunicaciones->enviar("4 01");
+        log->registrar('4');
+        hide();
+    }
 }
 
 
 void votar::on_votarUP_clicked()
 {
-    log->registrar('4');
-    comunicaciones->enviar("4 03");
+    if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Unidos Podemos", QMessageBox::Yes|QMessageBox::No).exec())
+    {
+        comunicaciones->enviar("4 01");
+        log->registrar('4');
+        std::string datos = comunicaciones->recibir();
+        execute(datos);
+        hide();
+    }
 
 }
 
 
 void votar::on_votarFA_clicked()
 {
-    log->registrar('4');
-    comunicaciones->enviar("4 04");
-}
-
-void votar::execute(char* mensaje) {
-  int comando = (int)mensaje[0];
-  comando -= 48;
-  switch(comando){
-    case 3:
-      std::cout << "Comando: 3" << std::endl;
-      std::cout << "Booleano: " << mensaje[2] << std::endl;
-      if(mensaje[2] == true){
-        this->votoValido();
-      }else{
-        this->votoInvalido();
-      }
-      std::cout << std::endl;
-      log->registrar('3');
-      break;
-  }
+    if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Frente Amplio", QMessageBox::Yes|QMessageBox::No).exec())
+    {
+        comunicaciones->enviar("4 01");
+        log->registrar('4');
+        hide()
+    }
 }
 
 
 void votar::votoValido(){
-    QMessageBox::information(this, "Votante Valido", "El número de cédula que se consultó SÍ se encuentra en el padrón");
+    QMessageBox::information(this, "Voto Valido", "El voto se realizo correctamente");
     //activarMesas* w = new activarMesas();
     hide();
 }
 
 void votar::votoInvalido() {
-    QMessageBox::information(this, "Votante Invalido", "El número de cédula que se consultó NO se encuentra en el padrón");
+    QMessageBox::information(this, "Votante Invalido", "El voto no se pudo realizar");
+}
+
+void votar::execute(std::string mensaje){
+  int comando = mensaje[0] - 48;
+  switch(comando){
+    case 3:
+      std::cout << "Comando: 3" << std::endl;
+      std::cout << "Booleano: " << mensaje[2] << std::endl;
+      if(mensaje[2] == '1'){
+        votoValido();
+      }else{
+        votoInvalido();
+      }
+      log->registrar('3');
+      break;
+  }
 }

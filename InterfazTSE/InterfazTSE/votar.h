@@ -32,7 +32,7 @@ private slots:
 
     void on_votarFA_clicked();
 
-    void execute(char* mensaje);
+    void execute(std::string mensaje);
 
     void votoValido();
 
