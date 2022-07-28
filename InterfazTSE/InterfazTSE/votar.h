@@ -17,7 +17,7 @@ class votar : public QWidget
     Q_OBJECT
 
 public:
-    explicit votar(QWidget *parent = nullptr);
+    explicit votar(Comunicaciones* comunicaciones = nullptr);
     void changeButton(int button);
     ~votar();
 

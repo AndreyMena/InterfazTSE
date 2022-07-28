@@ -2,13 +2,13 @@
 #include "ui_votar.h"
 #include <QMessageBox>
 
-votar::votar(QWidget *parent) :
-    QWidget(parent),
+votar::votar(Comunicaciones* comunicaciones) :
+    QWidget(nullptr), comunicaciones(comunicaciones),
     ui(new Ui::votar)
 {
     ui->setupUi(this);
     log = new Log();
-    comunicaciones = new Comunicaciones();
+    //comunicaciones = new Comunicaciones();
 
 }
 
@@ -28,7 +28,9 @@ void votar::on_votarPLN_clicked()
     {
         comunicaciones->enviar("4 01");
         log->registrar('4');
+        cout << "asdasd"<<endl;
         std::string datos = comunicaciones->recibir();
+        cout << "los " << datos << endl;
         execute(datos);
         hide();
     }
@@ -70,7 +72,7 @@ void votar::on_votarFA_clicked()
         log->registrar('4');
         std::string datos = comunicaciones->recibir();
         execute(datos);
-        hide()
+        hide();
     }
 }
 

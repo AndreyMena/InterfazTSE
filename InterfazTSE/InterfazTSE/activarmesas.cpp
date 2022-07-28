@@ -2,9 +2,9 @@
 #include "ui_activarmesas.h"
 #include "votar.h"
 
-activarMesas::activarMesas(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::activarMesas)
+activarMesas::activarMesas(Comunicaciones* comunicaciones) :
+    QWidget(nullptr),
+    ui(new Ui::activarMesas), comunicaciones(comunicaciones)
 {
     ui->setupUi(this);
 }
@@ -17,7 +17,7 @@ activarMesas::~activarMesas()
 void activarMesas::on_pushButton_3_clicked()
 {
     //this->setEnabled(false);
-    votar1 = new votar();
+    votar1 = new votar(comunicaciones);
     cout << "hey" << endl;
     votar1->show();
     votar1->changeButton(1);
@@ -27,7 +27,7 @@ void activarMesas::on_pushButton_3_clicked()
 void activarMesas::on_pushButton_4_clicked()
 {
     //this->setEnabled(false);
-    votar1 = new votar();
+    votar1 = new votar(comunicaciones);
     votar1->show();
     votar1->changeButton(2);
     this->hide();

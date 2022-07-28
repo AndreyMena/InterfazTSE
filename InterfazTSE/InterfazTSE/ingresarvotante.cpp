@@ -14,7 +14,7 @@ ingresarVotante::ingresarVotante(QWidget *parent) :
 {
     log = new Log();
     comunicaciones = new Comunicaciones();
-    activarmesas = new activarMesas();
+    activarmesas = new activarMesas(comunicaciones);
     ui->setupUi(this);
 }
 
@@ -38,6 +38,9 @@ void ingresarVotante::votanteValido(){
     QMessageBox::information(this, "Votante Valido", "El número de cédula que se consultó SÍ se encuentra en el padrón");
     //activarMesas* w = new activarMesas();
     comunicaciones->enviar("2 "+cedula);
+
+    comunicaciones->recibir();
+    log->registrar('2');
     activarmesas->show();
     hide();
 }

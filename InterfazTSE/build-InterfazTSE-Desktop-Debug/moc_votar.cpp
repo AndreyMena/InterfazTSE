@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_votar_t {
     const uint offsetsAndSize[22];
-    char stringdata0[131];
+    char stringdata0[137];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_votar_t, stringdata0) + ofs), len 
@@ -36,15 +36,15 @@ QT_MOC_LITERAL(27, 19), // "on_votarPAC_clicked"
 QT_MOC_LITERAL(47, 18), // "on_votarUP_clicked"
 QT_MOC_LITERAL(66, 18), // "on_votarFA_clicked"
 QT_MOC_LITERAL(85, 7), // "execute"
-QT_MOC_LITERAL(93, 5), // "char*"
-QT_MOC_LITERAL(99, 7), // "mensaje"
-QT_MOC_LITERAL(107, 10), // "votoValido"
-QT_MOC_LITERAL(118, 12) // "votoInvalido"
+QT_MOC_LITERAL(93, 11), // "std::string"
+QT_MOC_LITERAL(105, 7), // "mensaje"
+QT_MOC_LITERAL(113, 10), // "votoValido"
+QT_MOC_LITERAL(124, 12) // "votoInvalido"
 
     },
     "votar\0on_votarPLN_clicked\0\0"
     "on_votarPAC_clicked\0on_votarUP_clicked\0"
-    "on_votarFA_clicked\0execute\0char*\0"
+    "on_votarFA_clicked\0execute\0std::string\0"
     "mensaje\0votoValido\0votoInvalido"
 };
 #undef QT_MOC_LITERAL
@@ -93,7 +93,7 @@ void votar::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 1: _t->on_votarPAC_clicked(); break;
         case 2: _t->on_votarUP_clicked(); break;
         case 3: _t->on_votarFA_clicked(); break;
-        case 4: _t->execute((*reinterpret_cast< std::add_pointer_t<char*>>(_a[1]))); break;
+        case 4: _t->execute((*reinterpret_cast< std::add_pointer_t<std::string>>(_a[1]))); break;
         case 5: _t->votoValido(); break;
         case 6: _t->votoInvalido(); break;
         default: ;
@@ -109,7 +109,7 @@ const QMetaObject votar::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_votar_t
 , QtPrivate::TypeAndForceComplete<votar, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<char *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<std::string, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,

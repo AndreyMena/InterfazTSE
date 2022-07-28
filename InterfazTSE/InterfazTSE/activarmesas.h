@@ -3,9 +3,11 @@
 
 #include <QWidget>
 #include "votar.h"
+#include "comunicaciones.h"
 
 namespace Ui {
 class activarMesas;
+
 }
 
 class activarMesas : public QWidget
@@ -13,7 +15,7 @@ class activarMesas : public QWidget
     Q_OBJECT
 
 public:
-    explicit activarMesas(QWidget *parent = nullptr);
+    explicit activarMesas(Comunicaciones* comunicaciones = nullptr);
     //void enableButton(int button);
     ~activarMesas();
 
@@ -25,6 +27,7 @@ private slots:
 private:
     Ui::activarMesas *ui;
     votar* votar1;
+    Comunicaciones* comunicaciones;
 };
 
 #endif // ACTIVARMESAS_H
