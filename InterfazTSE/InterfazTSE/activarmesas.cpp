@@ -17,7 +17,8 @@ activarMesas::~activarMesas()
 void activarMesas::on_pushButton_3_clicked()
 {
     //this->setEnabled(false);
-    votar1 = new votar(this);
+    votar1 = new votar();
+    cout << "hey" << endl;
     votar1->show();
     votar1->changeButton(1);
     this->hide();
@@ -26,7 +27,7 @@ void activarMesas::on_pushButton_3_clicked()
 void activarMesas::on_pushButton_4_clicked()
 {
     //this->setEnabled(false);
-    votar1 = new votar(this);
+    votar1 = new votar();
     votar1->show();
     votar1->changeButton(2);
     this->hide();

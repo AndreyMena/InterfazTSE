@@ -32,7 +32,7 @@ int Comunicaciones::enviar(std::string mensaje) {
     } else {
       ipServidor.sin_family = AF_INET;
       ipServidor.sin_port = htons(1030);
-      ipServidor.sin_addr.s_addr = inet_addr("192.168.22.21");
+      ipServidor.sin_addr.s_addr = inet_addr("192.168.22.20");
       if(connect(s, (struct sockaddr *)&ipServidor, sizeof(ipServidor))<0){
         std::cout << std::endl << "Error de conexión por IP o puerto" << std::endl ;
         resultado= 2;
@@ -44,7 +44,7 @@ int Comunicaciones::enviar(std::string mensaje) {
     return resultado;
 }
 
-char* Comunicaciones::recibir() {
+string Comunicaciones::recibir() {
     bool resultado = false;
     int n = 0, conexion = 0;
     char datosReceptor[30];
@@ -71,7 +71,9 @@ char* Comunicaciones::recibir() {
     }
     //string str(datosReceptor);
     //return str;
-    return datosReceptor;
+    string str(datosReceptor);
+    cout <<"el c" << str << endl;
+    return str;
 }
 
 std::string Comunicaciones::getDate(){

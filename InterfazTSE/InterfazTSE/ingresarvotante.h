@@ -19,7 +19,7 @@ public:
     explicit ingresarVotante(QWidget *parent = nullptr);
     void votanteValido();
     void votanteInvalido();
-    void execute(char* datos);
+    void execute(string datos);
     ~ingresarVotante();
 
 private slots:

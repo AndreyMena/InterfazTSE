@@ -23,22 +23,26 @@ void votar::changeButton(int button){
 
 void votar::on_votarPLN_clicked()
 {
-    comunicaciones->enviar("4 01");
+
     log->registrar('4');
 
-    char* respuesta = comunicaciones->recibir();
+    comunicaciones->enviar("4 01");
+
+    //string respuesta = comunicaciones->recibir();
 
 }
 
 
 void votar::on_votarPAC_clicked()
 {
+    log->registrar('4');
     comunicaciones->enviar("4 02");
 }
 
 
 void votar::on_votarUP_clicked()
 {
+    log->registrar('4');
     comunicaciones->enviar("4 03");
 
 }
@@ -46,6 +50,7 @@ void votar::on_votarUP_clicked()
 
 void votar::on_votarFA_clicked()
 {
+    log->registrar('4');
     comunicaciones->enviar("4 04");
 }
 

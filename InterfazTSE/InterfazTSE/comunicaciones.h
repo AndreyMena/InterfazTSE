@@ -20,7 +20,7 @@ class Comunicaciones
 public:
   Comunicaciones();
   int enviar(std::string mensaje);
-  char* recibir();
+  string recibir();
 
   std::string getDate();
 
