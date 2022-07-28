@@ -28,6 +28,8 @@ void votar::on_votarPLN_clicked()
     {
         comunicaciones->enviar("4 01");
         log->registrar('4');
+        std::string datos = comunicaciones->recibir();
+        execute(datos);
         hide();
     }
 }
@@ -39,6 +41,8 @@ void votar::on_votarPAC_clicked()
     {
         comunicaciones->enviar("4 01");
         log->registrar('4');
+        std::string datos = comunicaciones->recibir();
+        execute(datos);
         hide();
     }
 }
@@ -64,6 +68,8 @@ void votar::on_votarFA_clicked()
     {
         comunicaciones->enviar("4 01");
         log->registrar('4');
+        std::string datos = comunicaciones->recibir();
+        execute(datos);
         hide()
     }
 }
@@ -71,8 +77,6 @@ void votar::on_votarFA_clicked()
 
 void votar::votoValido(){
     QMessageBox::information(this, "Voto Valido", "El voto se realizo correctamente");
-    //activarMesas* w = new activarMesas();
-    hide();
 }
 
 void votar::votoInvalido() {
