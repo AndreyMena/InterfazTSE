@@ -2,6 +2,8 @@
 #define ADMIN_H
 
 #include <QWidget>
+#include "comunicaciones.h"
+#include "conteovotos.h"
 
 namespace Ui {
 class Admin;
@@ -15,8 +17,13 @@ public:
     explicit Admin(QWidget *parent = nullptr);
     ~Admin();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Admin *ui;
+    Comunicaciones* comunicaciones;
+    conteoVotos* conteovotos;
 };
 
 #endif // ADMIN_H

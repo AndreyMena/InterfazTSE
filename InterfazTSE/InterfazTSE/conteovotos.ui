@@ -343,7 +343,7 @@ font: 5pt &quot;Microsoft YaHei&quot;;</string>
     <enum>QFrame::Raised</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_18">
+  <widget class="QLabel" name="votospln">
    <property name="geometry">
     <rect>
      <x>140</x>
@@ -573,7 +573,7 @@ font: 5pt &quot;Microsoft YaHei&quot;;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_22">
+  <widget class="QLabel" name="votospac">
    <property name="geometry">
     <rect>
      <x>460</x>
@@ -733,7 +733,7 @@ font: 6pt &quot;Microsoft YaHei&quot;;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_34">
+  <widget class="QLabel" name="votosfa">
    <property name="geometry">
     <rect>
      <x>460</x>
@@ -797,7 +797,7 @@ font: 6pt &quot;Microsoft YaHei&quot;;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_32">
+  <widget class="QLabel" name="votosup">
    <property name="geometry">
     <rect>
      <x>140</x>

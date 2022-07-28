@@ -12,3 +12,10 @@ conteoVotos::~conteoVotos()
 {
     delete ui;
 }
+
+conteoVotos::cambiarVotos(std::string pln, std::string pac, std::string up, std::string fa){
+    ui->votospl->setText(pln);
+    ui->votospac->setText(pac);
+    ui->votosup->setText(up);
+    ui->votosfa->setText(fa);
+}

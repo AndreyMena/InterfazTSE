@@ -32,6 +32,7 @@ void activarMesas::on_pushButton_4_clicked()
     votar1->changeButton(2);
     this->hide();
 }
+
 /*
 void activarMesas::enableButton(int button){
     if(button == 1){
