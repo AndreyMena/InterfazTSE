@@ -18,7 +18,6 @@ void activarMesas::on_pushButton_3_clicked()
 {
     //this->setEnabled(false);
     votar1 = new votar(comunicaciones);
-    cout << "hey" << endl;
     votar1->show();
     votar1->changeButton(1);
     this->hide();

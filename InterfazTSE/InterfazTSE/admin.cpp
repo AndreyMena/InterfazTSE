@@ -20,7 +20,7 @@ Admin::~Admin()
 void Admin::on_pushButton_clicked()
 {
     comunicaciones = new Comunicaciones();
-    comunicaciones->enviar("");
+    comunicaciones->enviar("8");
     std::string votos = comunicaciones->recibir();
     int posInit = 0;
     int posFound = 0;
@@ -32,11 +32,18 @@ void Admin::on_pushButton_clicked()
         posInit = posFound + 1;
          partidos.push_back(splitted);
       }
-    std::string fa = partidos.pop_back();
-    std::string up = partidos.pop_back();
-    std::string pac = partidos.pop_back();
-    std::string pln = partidos.pop_back();
+
+    std::string fa = partidos[3];
+    //partidos.pop_back();
+    std::string up = partidos[2];
+    //partidos.pop_back();
+    std::string pac = partidos[1];
+    //partidos.pop_back();
+    std::string pln = partidos[0];
+    partidos.pop_back();
 
     conteovotos = new conteoVotos();
     conteovotos->cambiarVotos(pln, pac, up, fa);
+    conteovotos->show();
+    this->hide();
 }

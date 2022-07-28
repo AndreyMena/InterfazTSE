@@ -14,7 +14,7 @@ class conteoVotos : public QWidget
 public:
     explicit conteoVotos(QWidget *parent = nullptr);
     ~conteoVotos();
-    cambiarVotos(std::vector<std::string> partidos);
+    void cambiarVotos(std::string pln, std::string pac, std::string up, std::string fa);
 
 private:
     Ui::conteoVotos *ui;

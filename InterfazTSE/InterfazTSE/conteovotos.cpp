@@ -1,5 +1,6 @@
 #include "conteovotos.h"
 #include "ui_conteovotos.h"
+#include <QString>
 
 conteoVotos::conteoVotos(QWidget *parent) :
     QWidget(parent),
@@ -13,9 +14,9 @@ conteoVotos::~conteoVotos()
     delete ui;
 }
 
-conteoVotos::cambiarVotos(std::string pln, std::string pac, std::string up, std::string fa){
-    ui->votospl->setText(pln);
-    ui->votospac->setText(pac);
-    ui->votosup->setText(up);
-    ui->votosfa->setText(fa);
+void conteoVotos::cambiarVotos(std::string pln, std::string pac, std::string up, std::string fa){
+    ui->votospln->setText(QString::fromStdString(pln));
+    ui->votospac->setText(QString::fromStdString(pac));
+    ui->votosup->setText(QString::fromStdString(up));
+    ui->votosfa->setText(QString::fromStdString(fa));
 }
