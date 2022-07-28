@@ -6,6 +6,7 @@
 #include "log.h"
 //#include "activarmesas.h"
 
+class ingresarVotante;
 class activarMesas;
 
 namespace Ui {
@@ -17,9 +18,10 @@ class votar : public QWidget
     Q_OBJECT
 
 public:
-    explicit votar(Comunicaciones* comunicaciones = nullptr);
+    explicit votar(Comunicaciones* comunicaciones = nullptr, ingresarVotante* ingresarvotante = nullptr);
     void changeButton(int button);
     ~votar();
+    ingresarVotante* ingresarvotante;
 
 private slots:
 

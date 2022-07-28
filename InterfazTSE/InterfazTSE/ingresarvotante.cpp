@@ -42,7 +42,7 @@ void ingresarVotante::votanteValido(){
     comunicaciones->recibir();
     log->registrar('2');
     activarmesas->show();
-    hide();
+    //hide();
 }
 
 void ingresarVotante::votanteInvalido(){

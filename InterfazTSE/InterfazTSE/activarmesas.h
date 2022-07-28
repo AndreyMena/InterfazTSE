@@ -5,6 +5,8 @@
 #include "votar.h"
 #include "comunicaciones.h"
 
+class ingresarVotante;
+
 namespace Ui {
 class activarMesas;
 
@@ -15,7 +17,7 @@ class activarMesas : public QWidget
     Q_OBJECT
 
 public:
-    explicit activarMesas(Comunicaciones* comunicaciones = nullptr);
+    explicit activarMesas(Comunicaciones* comunicaciones = nullptr, ingresarVotante* ingresarvotante = nullptr);
     //void enableButton(int button);
     ~activarMesas();
 
@@ -28,6 +30,7 @@ private:
     Ui::activarMesas *ui;
     votar* votar1;
     Comunicaciones* comunicaciones;
+    ingresarVotante* ingresarvotante;
 };
 
 #endif // ACTIVARMESAS_H

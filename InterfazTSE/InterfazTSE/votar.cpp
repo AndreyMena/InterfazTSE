@@ -2,9 +2,9 @@
 #include "ui_votar.h"
 #include <QMessageBox>
 
-votar::votar(Comunicaciones* comunicaciones) :
-    QWidget(nullptr), comunicaciones(comunicaciones),
-    ui(new Ui::votar)
+votar::votar(Comunicaciones* comunicaciones, ingresarVotante* ingresarvotante) :
+    QWidget(nullptr),
+    ui(new Ui::votar), comunicaciones(comunicaciones), ingresarvotante(ingresarvotante)
 {
     ui->setupUi(this);
     log = new Log();
@@ -26,13 +26,12 @@ void votar::on_votarPLN_clicked()
 
     if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Liberación Nacional", QMessageBox::Yes|QMessageBox::No).exec())
     {
-        comunicaciones->enviar("4 01");
+        comunicaciones->enviar("4 1");
         log->registrar('4');
-        cout << "asdasd"<<endl;
         std::string datos = comunicaciones->recibir();
-        cout << "los " << datos << endl;
         execute(datos);
         hide();
+        //ingresarvotante->show();
     }
 }
 
@@ -41,7 +40,7 @@ void votar::on_votarPAC_clicked()
 {
     if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Acci[on Ciudadana", QMessageBox::Yes|QMessageBox::No).exec())
     {
-        comunicaciones->enviar("4 01");
+        comunicaciones->enviar("4 2");
         log->registrar('4');
         std::string datos = comunicaciones->recibir();
         execute(datos);
@@ -54,7 +53,7 @@ void votar::on_votarUP_clicked()
 {
     if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Unidos Podemos", QMessageBox::Yes|QMessageBox::No).exec())
     {
-        comunicaciones->enviar("4 01");
+        comunicaciones->enviar("4 3");
         log->registrar('4');
         std::string datos = comunicaciones->recibir();
         execute(datos);
@@ -68,7 +67,7 @@ void votar::on_votarFA_clicked()
 {
     if (QMessageBox::Yes == QMessageBox(QMessageBox::Information, "Votar", "Seguro que desea votar por el Partido Frente Amplio", QMessageBox::Yes|QMessageBox::No).exec())
     {
-        comunicaciones->enviar("4 01");
+        comunicaciones->enviar("4 4");
         log->registrar('4');
         std::string datos = comunicaciones->recibir();
         execute(datos);

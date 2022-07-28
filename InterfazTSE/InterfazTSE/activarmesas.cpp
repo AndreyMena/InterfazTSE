@@ -2,9 +2,9 @@
 #include "ui_activarmesas.h"
 #include "votar.h"
 
-activarMesas::activarMesas(Comunicaciones* comunicaciones) :
+activarMesas::activarMesas(Comunicaciones* comunicaciones, ingresarVotante* ingresarvotante) :
     QWidget(nullptr),
-    ui(new Ui::activarMesas), comunicaciones(comunicaciones)
+    ui(new Ui::activarMesas), comunicaciones(comunicaciones), ingresarvotante(ingresarvotante)
 {
     ui->setupUi(this);
 }
